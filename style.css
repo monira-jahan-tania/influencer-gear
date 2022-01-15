@@ -149,7 +149,9 @@ nav .logo{
     font-size: 20px;
     padding-top: 10px;
     margin-right: 30px;
+    cursor: pointer;
 }
+
 
 /* =========bonous part======
 =========================== */
@@ -166,6 +168,13 @@ nav .logo{
     justify-content: center;
     box-shadow: 10px 5px 5px rgb(155, 153, 153);;
 }
+.fa.fa-quote-left{
+    font-size: 34px;
+    color: #ff008e;
+  }
+.testi-icon{
+    color: goldenrod;
+}
 .testimonial .testis .testi img{
     width: 50px;
     margin-top: 20px;
@@ -174,6 +183,9 @@ nav .logo{
 .testi p{
     color: #787885;
     font-weight: 600;
+}
+.testi h3{
+    color: #E02C6D;
 }
 .brands{
     margin-top: 20px;
@@ -206,6 +218,7 @@ footer .info{
    align-items: center;
 }
 footer .media{
+    margin-top: 15px;
     display: flex;
 }
 footer .media .icon{
@@ -218,6 +231,11 @@ footer .media .icon{
     border-radius: 50%;
 
 }
+.media .icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 /*========= responsive =====
 ==========================*/
@@ -225,6 +243,9 @@ footer .media .icon{
 @media (max-width: 995px) {
     .cards{
         grid-template-columns: repeat(2, 1fr);
+    }
+    .card.hide{
+        display: none;
     }
     .banner-right img{
         width: 100%;
@@ -264,8 +285,7 @@ footer .media .icon{
         text-align: center;
     }
     .btn{
-      display: flex;
-      justify-content: center;
+        margin-left: 25%;
     }
     .testimonial .testis{
         display: grid;
