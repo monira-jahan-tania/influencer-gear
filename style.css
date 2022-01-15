@@ -46,12 +46,17 @@ nav .logo{
     font-size: 24px;
 }
 
+  .small-containers{
+    
+  }
+
 /*=========== banner=============
 ============================== */
 .banner{
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
+    margin-bottom: 20px;
 }
 .banner .banner-left{
     display: flex;
@@ -91,10 +96,11 @@ nav .logo{
     padding-top: 10%;
 }
 
+
 /*=========== popular section ====
 ==================================*/
 .popular-section{
-    margin: 10px 50px;
+    margin-bottom: 40px;
     display: flex;
     flex-direction: column;
     color: var(---primary-color);
@@ -145,12 +151,50 @@ nav .logo{
     margin-right: 30px;
 }
 
+/* =========bonous part======
+=========================== */
+.testimonial .testis{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.testimonial .testi{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 10px 5px 5px rgb(155, 153, 153);;
+}
+.testimonial .testis .testi img{
+    width: 50px;
+    margin-top: 20px;
+    border-radius: 50%;
+}
+.testi p{
+    color: #787885;
+    font-weight: 600;
+}
+.brands{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    
+}
+.brands img{
+    filter: grayscale(100%);
+    cursor: pointer;
+}
+.brands img:hover{
+    filter: grayscale(0);
+}
+
 /*========= footer====
 ==================== */
 footer{
     width: 100%;
     background-color: #0A0826;
-    padding: 40px 0;
+    padding: 50px 0;
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -172,5 +216,70 @@ footer .media .icon{
     width: 30px;
     height: 30px;
     border-radius: 50%;
+
+}
+
+/*========= responsive =====
+==========================*/
+
+@media (max-width: 995px) {
+    .cards{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .banner-right img{
+        width: 100%;
+    }
+    .testimonial .testis{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .brands img{
+        width: 80%;
+    }
+    
+}
+@media (max-width: 690px) {
+    .navigation{
+        display: none;
+    }
+    .cards{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .banner{
+        grid-template-columns: 1fr;
+    }
+    .banner-right{
+        order: 1;
+    }
+    .banner-left{
+        order: 2;
+        
+    }
+    .banner-left h1{
+        font-size: 35px;
+        text-align: center;
+    }
+    .banner-left p{
+        text-align: center;
+    }
+    .btn{
+      display: flex;
+      justify-content: center;
+    }
+    .testimonial .testis{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .brands{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .brands img{
+        width: 60%;
+    }
+    .brands .last{
+        display: none;
+    }
+    
 
 }
